@@ -1,11 +1,11 @@
 function updateTime() {
-  let copenhagenElement = document.querySelector("#copenhagen");
-  let copenhagenDateElement = copenhagenElement.querySelector(".date");
-  let copenhagenTimeElement = copenhagenElement.querySelector(".time");
-  let copenhagenTime = moment().tz("Europe/Copenhagen");
+  let johannesburgElement = document.querySelector("#johannesburg");
+  let johannesburgDateElement = johannesburgElement.querySelector(".date");
+  let johannesburgTimeElement = johannesburgElement.querySelector(".time");
+  let johannesburgTime = moment().tz("Africa/Johannesburg");
 
-  copenhagenDateElement.innerHTML = copenhagenTime.format("MMMM Do YYYY");
-  copenhagenTimeElement.innerHTML = copenhagenTime.format(
+  johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM Do YYYY");
+  johannesburgTimeElement.innerHTML = johannesburgTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 
@@ -17,19 +17,16 @@ function updateTime() {
   dubaiDateElement.innerHTML = dubaiTime.format("MMMM Do YYYY");
   dubaiTimeElement.innerHTML = dubaiTime.format("h:mm:ss [<small>]A[</small>]");
 
-  let melbourneElement = document.querySelector("#melbourne");
-  let melbourneDateElement = melbourneElement.querySelector(".date");
-  let melbourneTimeElement = melbourneElement.querySelector(".time");
-  let melbourneTime = moment().tz("Australia/Melbourne");
+  let tahitiElement = document.querySelector("#tahiti");
+  let tahitiDateElement = tahitiElement.querySelector(".date");
+  let tahitiTimeElement = tahitiElement.querySelector(".time");
+  let tahitiTime = moment().tz("Pacific/Tahiti");
 
-  melbourneDateElement.innerHTML = melbourneTime.format("MMMM Do YYYY");
-  melbourneTimeElement.innerHTML = melbourneTime.format(
+  tahitiDateElement.innerHTML = tahitiTime.format("MMMM Do YYYY");
+  tahitiTimeElement.innerHTML = tahitiTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 }
-
-updateTime();
-setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -51,6 +48,9 @@ function updateCity(event) {
         </div>
         <a href="/">All cities</a>`;
 }
+
+updateTime();
+setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
