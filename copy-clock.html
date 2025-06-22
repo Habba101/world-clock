@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock - Rahaba Motaung</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="/"></a>World Clock</h1>
+
+      <select id="city">
+        <option value="">Select a city.....</option>
+        <option value="current">My current location</option>
+        <option value="Europe/Copenhagen">Copenhagen</option>
+        <option value="Asia/Dubai">Dubai</option>
+        <option value="Australia/Melbourne">Melbourne</option>
+        <option value="Africa/Johannesburg">Johannesburg</option>
+        <option value="Pacific/Tahiti">Tahiti</option>
+        <option value="US/Alaska">Alaska</option>
+        <option value="Canada/Yukon">Yukon</option>
+      </select>
+
+      <div id="cities">
+        <div class="city" id="copenhagen">
+          <div>
+            <h2>Copenhagen</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="dubai">
+          <div>
+            <h2>Dubai</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="melbourne">
+          <div>
+            <h2>Melbourne</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      This project was coded with ❤️ by <strong>Rahaba Motaung</strong>
+      and is open sourced on
+      <a href="https://github.com/Habba101/world-clock" target="_blank"
+        >GitHub</a
+      >
+    </footer>
+
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
